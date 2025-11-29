@@ -1,0 +1,12 @@
+[
+  { "img": "/img/Stu.png", "title": "UPSC" },
+  { "img": "/img/Stu1.png", "title": "State PSC Exam" },
+  { "img": "/img/Stu2.png", "title": "Other State Exams" },
+  { "img": "/img/Stu3.png", "title": "Police Exams" },
+  { "img": "/img/Stu4.png", "title": "SSC Exams" },
+  { "img": "/img/Stu5.png", "title": "Railway Exams" },
+  { "img": "/img/Stu6.png", "title": "Teaching Exams" },
+  { "img": "/img/Stu7.png", "title": "Defense Exams" },
+  { "img": "/img/Stu8.png", "title": "Banking Exams" },
+  { "img": "/img/Stu9.png", "title": "Others" }
+]

@@ -1,0 +1,66 @@
+[
+    {
+    "id": 1,
+    "img": "/img/shop.png",
+    "title": "NOTESBOOK GLOBAL ACADEMY Black Backpack Bag",
+    "price": 549,
+    "mrp": 1199
+  },
+  {
+    "id": 2,
+    "img": "/img/shop1.png",
+    "title": "NOTESBOOK GLOBAL ACADEMY Black Backpack Bag",
+   "price": 549,
+    "mrp": 1199
+  },
+   {
+    "id": 3,
+    "img": "/img/shop2.png",
+    "title": "UP Current Affairs Magazine November 2025 Hindi Edition",
+    "price": 100,
+    "mrp": 120
+  },
+   {
+    "id": 4,
+    "img": "/img/shop3.png",
+    "title": "UPSC Current Affairs Magazine November 2025 Hindi Edition",
+    "price": 120,
+    "mrp": 140
+  },
+   {
+    "id": 5,
+    "img": "/img/shop4.png",
+    "title": "Bihar Current Affairs Magazine November 2025 English Edition",
+    "price": 100,
+    "mrp": 120
+  },
+   {
+    "id": 6,
+    "img": "/img/shop5.png",
+    "title": "Bihar Current Affairs Magazine November 2025 English Edition",
+    "price": 100,
+    "mrp": 120
+  },
+   {
+    "id": 7,
+    "img": "/img/shop6.png",
+    "title": "UPPCS General Studies Mains Paper-VI Hindi Medium",
+    "price": 279,
+    "mrp": 350
+  },
+   {
+    "id": 8,
+    "img": "/img/shop7.png",
+    "title": "BPSSC Bihar Daroga Bharti Pariksha Fast Track Study Book (Volume I):…",
+    "price": 249,
+    "mrp": 300
+  },
+   {
+    "id": 9,
+    "img": "/img/shop8.png",
+    "title": "BPSSC Bihar Daroga Bharti Pariksha Fast Track Study Book (Volume I):…",
+    "price": 2799,
+    "mrp": 3249
+  }
+  
+]

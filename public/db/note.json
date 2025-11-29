@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "img": "/img/home2.png",
+    "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+    "price": 575,
+    "mrp": 1199
+  },
+  {
+    "id": 2,
+    "img": "/img/home2.png",
+    "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+     "price": 575,
+    "mrp": 1199
+  },
+  {
+    "id": 3,
+    "img": "/img/home2.png",
+   "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+    "price": 575,
+    "mrp": 1199
+  },
+  {
+    "id": 4,
+    "img": "/img/home2.png",
+   "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+     "price": 575,
+    "mrp": 1199
+  },
+  {
+    "id": 5,
+    "img": "/img/home3.png",
+   "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+       "price": 575,
+    "mrp": 1199
+  },
+  {
+    "id": 6,
+    "img": "/img/home4.png",
+   "title": "Notesbook Global Studies Stylish Dark Grey & Black Bag",
+      "price": 575,
+    "mrp": 1199
+   
+  }
+]
