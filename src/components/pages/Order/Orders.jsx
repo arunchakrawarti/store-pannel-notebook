@@ -6,6 +6,7 @@ import { GiTireIronCross } from "react-icons/gi";
 import { FaStar } from "react-icons/fa";
 import { MdDirectionsBus, MdOutlineDoNotDisturbOnTotalSilence } from "react-icons/md";
 import React from "react";
+import Link from "next/link";
 
 const Orders = () => {
   return (
@@ -85,13 +86,17 @@ const Orders = () => {
 
         
         <div className="flex flex-col sm:flex-row gap-4">
+          <Link href='add-to-card'>
           <button className="bg-[#2E3192] text-white font-urbanist font-semibold px-15 py-3 rounded hover:bg-blue-800 transition">
             Buy Now
           </button>
+          </Link>
 
+         <Link href='add-to-card'>
           <button className="bg-white border border-gray-300 font-urbanist font-semibold px-15 py-3 rounded hover:bg-gray-100 transition">
             Add to Cart
           </button>
+         </Link>
         </div>
 
     

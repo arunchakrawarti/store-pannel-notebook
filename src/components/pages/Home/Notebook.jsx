@@ -6,6 +6,7 @@ import {
   FaRegArrowAltCircleRight,
 } from "react-icons/fa";
 import Card1 from "../../molecules/Card1";
+import Link from "next/link";
 
 const Notebook = () => {
   const scrollRef = useRef(null);
@@ -45,14 +46,16 @@ const Notebook = () => {
         className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth mt-5"
       >
         {note.map((item) => (
-          <Card1
-            key={item.id}
-            img={item.img}
-            title={item.title}
-            price={item.price}
-            mrp={item.mrp}
-            rating={item.rating}
-          />
+          <Link href="/order">
+            <Card1
+              key={item.id}
+              img={item.img}
+              title={item.title}
+              price={item.price}
+              mrp={item.mrp}
+              rating={item.rating}
+            />
+          </Link>
         ))}
       </div>
       <div className="flex mt-3 justify-end">

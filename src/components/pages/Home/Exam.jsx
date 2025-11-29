@@ -6,6 +6,7 @@ import {
   FaRegArrowAltCircleLeft,
   FaRegArrowAltCircleRight,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const Exam = () => {
   const scrollRef = useRef(null);
@@ -50,7 +51,9 @@ const Exam = () => {
             key={i}
             className="min-w-[220px] sm:min-w-[240px] scroll-snap-align-start"
           >
-            <Card img={item.img} title={item.title} />
+            <Link href="/order">
+              <Card img={item.img} title={item.title} />
+            </Link>
           </div>
         ))}
       </div>

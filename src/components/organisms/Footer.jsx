@@ -13,10 +13,10 @@ const Footer = () => {
       
       <div className="max-w-[1440px] mx-auto">
         
-        {/* GRID SECTION */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           
-          {/* Column 1 */}
+      
           <div>
             <img
               src="/img/note.png"
@@ -34,7 +34,7 @@ const Footer = () => {
                 Contact: support@example.com
               </p>
               <p className="font-urbanist font-normal text-[16px] leading-[24px]">
-                Phone: +91 9876543210
+                Phone: <span className="bg-[#EC7954] px-2 py-2 rounded-2xl">+91 9876543210</span>
               </p>
             </div>
 
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2 */}
+         
           <div>
             <h3 className="font-urbanist font-bold text-[20px] leading-[28px] mb-4">
               Links

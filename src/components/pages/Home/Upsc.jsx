@@ -6,6 +6,7 @@ import {
   FaRegArrowAltCircleRight,
 } from "react-icons/fa";
 import Card1 from "../../molecules/Card1";
+import Link from "next/link";
 
 const Upsc = () => {
   const scrollRef = useRef(null);
@@ -45,6 +46,7 @@ const Upsc = () => {
         className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth mt-5"
       >
         {upsc.map((item) => (
+         <Link href='order'>
           <Card1
             key={item.id}
             img={item.img}
@@ -53,6 +55,7 @@ const Upsc = () => {
             mrp={item.mrp}
             rating={item.rating}
           />
+         </Link>
         ))}
       </div>
       <div className="flex mt-3 justify-end">
