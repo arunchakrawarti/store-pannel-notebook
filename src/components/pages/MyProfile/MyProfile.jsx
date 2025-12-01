@@ -37,7 +37,7 @@ const MyProfile = () => {
             </div>
           </div>
         </div>
-        <div className="p-4 sm:p-6 border-t border-gray-300 flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-0">
+        <div className="p-4 sm:p-6 border-t border-gray-300 flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-10">
           <div className="flex-1 min-w-0">
              <Input label=" Saved Address:"
              type="textarea" placeholder="42, Green Oak Residency, Palm Street, Indira Nagar, New Delhi – 110045" />

@@ -13,16 +13,16 @@ const Input = ({
   return (
     <div className="text-text-primary flex w-full flex-col gap-1">
       {label && (
-        <label className="text-sm font-medium text-gray-700">{label}</label>
+        <label className="font-poppins font-medium text-[12px] leading-[20px] tracking-[0%]">{label}</label>
       )}
 
       {rest?.type === "textarea" ? (
         <textarea
           {...rest}
-          className={`text-dark w-full rounded-sm p-3 text-sm transition-all duration-300 ease-in-out outline-none ${
+          className={`font-poppins font-normal text-[12px] leading-[20px]  tracking-[0%] h-[90px] p-3 ${
             error
               ? "border border-red-400 ring-2 ring-red-300 focus:ring-red-500"
-              : "border border-gray-200 focus:ring-2 focus:ring-gray-200"
+              : "border border-gray-300 focus:ring-2 focus:ring-gray-200"
           } ${className}`}
         />
       ) : rest?.type === "select" ? (
@@ -60,7 +60,7 @@ const Input = ({
           )}
           <input
             {...rest}
-            className={`text-dark h-[45px] w-full rounded-sm p-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 disabled:cursor-not-allowed ${
+            className={`text-dark h-[45px] w-full rounded-sm p-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 font-poppins disabled:cursor-not-allowed ${
               error
                 ? "border border-red-400 ring-2 ring-red-300 focus:ring-red-500"
                 : "border border-gray-200 focus:ring-2 focus:ring-gray-200"
