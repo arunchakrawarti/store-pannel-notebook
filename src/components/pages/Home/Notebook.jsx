@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import Card1 from "../../molecules/Card1";
 import Link from "next/link";
+import { Button } from "@/components/comman/Button";
 
 const Notebook = () => {
   const scrollRef = useRef(null);
@@ -28,10 +29,10 @@ const Notebook = () => {
 
         <div className="flex gap-3">
           <button onClick={scrollLeft}>
-            <FaRegArrowAltCircleLeft className="h-10 w-10 cursor-pointer" />
+            <FaRegArrowAltCircleLeft className="h-10 w-10 cursor-pointer text-[#2E3192]" />
           </button>
           <button onClick={scrollRight}>
-            <FaRegArrowAltCircleRight className="h-10 w-10 cursor-pointer" />
+            <FaRegArrowAltCircleRight className="h-10 w-10 cursor-pointer text-[#2E3192]" />
           </button>
         </div>
       </div>
@@ -58,10 +59,10 @@ const Notebook = () => {
           </Link>
         ))}
       </div>
-      <div className="flex mt-3 justify-end">
-        <button className="font-urbanist font-medium text-[#2E3192] text-[18px] leading-[28px] align-middle">
+      <div className="flex mt-3 justify-end ">
+        <Button>
           View All
-        </button>
+        </Button>
       </div>
     </div>
   );

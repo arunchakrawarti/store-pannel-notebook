@@ -2,6 +2,7 @@ import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import { FaRegEdit } from "react-icons/fa";
+import Input from "@/components/atoms/Input";
 
 const MyProfile = () => {
   return (
@@ -22,50 +23,29 @@ const MyProfile = () => {
           <div className="flex flex-col md:flex-row md:items-center md:gap-10 gap-4 flex-wrap">
             
             <div className="flex items-center gap-1 min-w-0">
-              <h2 className="font-poppins font-normal text-[12px] sm:text-[14px] leading-[20px]">
-                Name:
-              </h2>
-              <p className="font-poppins font-medium text-[12px] sm:text-[14px] leading-[20px] truncate">
-                Dev Sisodiya
-              </p>
+              <Input label="Name" placeholder=" Dev Sisodiya" />
             </div>
 
             
             <div className="flex items-center gap-1 min-w-0">
-              <FiPhone className="text-gray-600" />
-              <h2 className="font-poppins font-normal text-[12px] sm:text-[14px] leading-[20px]">
-                Phone:
-              </h2>
-              <p className="font-poppins font-medium text-[12px] sm:text-[14px] leading-[20px] truncate">
-                354637888
-              </p>
+              <Input label="Phone" placeholder="  354637888" />
             </div>
 
             
             <div className="flex items-center gap-1 min-w-0">
-              <CiMail className="text-gray-600" />
-              <h2 className="font-poppins font-normal text-[12px] sm:text-[14px] leading-[20px]">
-                Email:
-              </h2>
-              <p className="font-poppins font-medium text-[12px] sm:text-[14px] leading-[20px] truncate">
-                dev@example.com
-              </p>
+               <Input label="Email" placeholder="dev@example.com" />
             </div>
           </div>
         </div>
         <div className="p-4 sm:p-6 border-t border-gray-300 flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-0">
           <div className="flex-1 min-w-0">
-            <h2 className="font-poppins font-semibold text-[14px] sm:text-[16px] leading-[20px]">
-              Saved Address:
-            </h2>
-            <p className="font-poppins mt-3 font-normal text-[12px] sm:text-[14px] leading-[20px] break-words overflow-hidden">
-              42, Green Oak Residency, Palm Street, Indira Nagar, New Delhi – 110045
-            </p>
+             <Input label=" Saved Address:"
+             type="textarea" placeholder="42, Green Oak Residency, Palm Street, Indira Nagar, New Delhi – 110045" />
           </div>
 
           <div className="flex items-center px-3 py-2 gap-2 sm:gap-3 rounded-md border border-[#2E3192] text-[#2E3192] cursor-pointer hover:bg-gray-100  transition w-max">
             <FaRegEdit />
-            <button className="font-poppins font-medium text-[12px] sm:text-[14px]">
+            <button className="font-poppins font-medium cursor-pointer text-[12px] sm:text-[14px]">
               Edit
             </button>
           </div>

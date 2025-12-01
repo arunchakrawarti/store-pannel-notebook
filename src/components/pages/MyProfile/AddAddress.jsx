@@ -47,7 +47,7 @@ const AddAddress = () => {
     <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-10 md:py-16">
       <div className="inline-flex items-center bg-[#2E3192] rounded-md py-2 px-4 text-white gap-2 cursor-pointer hover:bg-[#1f236f] transition">
         <Plus size={18} />
-        <span className="font-poppins font-medium text-sm sm:text-base">
+        <span className="font-poppins font-medium cursor-pointer text-sm sm:text-base">
           Add Address
         </span>
       </div>
@@ -79,7 +79,7 @@ const AddAddress = () => {
       </form>
 
       <div className="mt-2">
-        <button className="bg-[#2E3192] text-white px-7 py-2 rounded-md">
+        <button className="bg-[#2E3192] text-white px-7 cursor-pointer py-2 rounded-md">
           Save
         </button>
       </div>

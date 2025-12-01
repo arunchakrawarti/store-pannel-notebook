@@ -28,10 +28,10 @@ const Exam = () => {
 
         <div className="flex gap-3">
           <button onClick={scrollLeft}>
-            <FaRegArrowAltCircleLeft className="h-10 w-10 cursor-pointer" />
+            <FaRegArrowAltCircleLeft className="h-10 w-10 cursor-pointer text-[#2E3192]" />
           </button>
           <button onClick={scrollRight}>
-            <FaRegArrowAltCircleRight className="h-10 w-10 cursor-pointer" />
+            <FaRegArrowAltCircleRight className="h-10 w-10 cursor-pointer text-[#2E3192]" />
           </button>
         </div>
       </div>
