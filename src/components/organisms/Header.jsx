@@ -1,215 +1,5 @@
-// "use client";
-// import React, { useState, useRef } from "react";
-// import Image from "next/image";
-// import {
-//   Heart,
-//   ShoppingCart,
-//   ShoppingBag,
-//   Menu,
-//   X,
-//   Search,
-// } from "lucide-react";
-// import { MdKeyboardArrowRight } from "react-icons/md";
-// import Link from "next/link";
-
-// const Header = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-//   const [profileOpen, setProfileOpen] = useState(false);
-//   const profileBtnRef = useRef(null);
-
-//   return (
-//     <>
-//       <div className="fixed top-0 left-0 w-full z-40 bg-white">
-//         <div className="w-full bg-black text-white text-center py-1 text-[13px] sm:text-[14px] md:text-[15px] font-urbanist">
-//           Welcome to Notebook Global Academy Store
-//         </div>
-
-//         <header className="shadow bg-white w-full">
-//           <div className="max-w-[1300px] mx-auto flex items-center justify-between px-3 sm:px-4 md:px-6 py-2 sm:py-3">
-//             <Image
-//               src="/img/Notebook.png"
-//               width={60}
-//               height={60}
-//               alt="Logo"
-//               className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[55px] md:h-[55px]"
-//             />
-
-//             <div className="hidden lg:flex flex-1 mx-6">
-//               <div className="flex items-center w-full max-w-[450px] bg-gray-100 border border-gray-300 rounded-full px-4 py-2">
-//                 <Search size={18} />
-//                 <input
-//                   type="text"
-//                   placeholder="Search for Products..."
-//                   className="flex-1 ml-3 bg-transparent outline-none text-[14px]"
-//                 />
-//               </div>
-//             </div>
-
-//             <div className="hidden md:flex items-center gap-5">
-//               <div className="relative">
-//                 <div
-//                   ref={profileBtnRef}
-//                   onClick={() => setProfileOpen(!profileOpen)}
-//                   className="px-3 sm:px-4 py-2 bg-[#2E3192] flex items-center gap-2 text-white cursor-pointer rounded-md"
-//                 >
-//                   <span className="font-urbanist text-[14px] sm:text-[15px] md:text-[16px]">
-//                     Lazarus
-//                   </span>
-//                   <MdKeyboardArrowRight
-//                     className={`${
-//                       profileOpen ? "rotate-90" : ""
-//                     } transition-all`}
-//                   />
-//                 </div>
-//               </div>
-
-//               <Link href="/">
-//                 <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-//                   <ShoppingBag size={23} />
-//                   <span className="font-urbanist hidden xl:block">Shop</span>
-//                 </div>
-//               </Link>
-
-//               <Link href="/add-to-card">
-//                 <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-//                   <Heart size={23} />
-//                   <span className="font-urbanist hidden xl:block">
-//                     My Wishlist
-//                   </span>
-//                 </div>
-//               </Link>
-
-//               <Link href="/add-to-card">
-//                 <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-//                   <ShoppingCart size={23} />
-//                   <span className="font-urbanist hidden xl:block">My Cart</span>
-//                 </div>
-//               </Link>
-//             </div>
-
-//             <button
-//               className="md:hidden"
-//               onClick={() => setMenuOpen(!menuOpen)}
-//             >
-//               {menuOpen ? <X size={28} /> : <Menu size={28} />}
-//             </button>
-//           </div>
-
-//           {menuOpen && (
-//             <div className="md:hidden bg-white shadow-lg w-full py-4 px-4 space-y-4">
-//               <button className="w-full text-white px-3 py-2 bg-[#2E3192] rounded-md">
-//                 Lazarus
-//               </button>
-
-//               <div className="bg-[#2E3192] text-white  rounded-md py-2">
-//                 <Link href="/my-profile">
-//                   <p
-//                     className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-//                     onClick={() => setMenuOpen(false)}
-//                   >
-//                     My Profile
-//                   </p>
-//                 </Link>
-//                 <Link href="/my-order">
-//                   <p
-//                     className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-//                     onClick={() => setMenuOpen(false)}
-//                   >
-//                     My Orders
-//                   </p>
-//                 </Link>
-//                 <p
-//                   className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-//                   onClick={() => setMenuOpen(false)}
-//                 >
-//                   Logout
-//                 </p>
-//               </div>
-
-//               <Link href="/">
-//                 <div
-//                   className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100 "
-//                   onClick={() => setMenuOpen(false)}
-//                 >
-//                   <ShoppingBag size={22} />
-//                   <span className="font-urbanist font-medium text-[15px]">
-//                     Shop
-//                   </span>
-//                 </div>
-//               </Link>
-
-//               <Link href="/add-to-card">
-//                 <div className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100" onClick={() => setMenuOpen(false)}>
-//                   <Heart size={22} />
-//                   <span className="font-urbanist font-medium text-[15px]">
-//                     My Wishlist
-//                   </span>
-//                 </div>
-//               </Link>
-
-//               <Link href="add-to-card">
-//                 <div
-//                   className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100"
-//                   onClick={() => setMenuOpen(false)}
-//                 >
-//                   <ShoppingCart size={22} />
-//                   <span className="font-urbanist font-medium text-[15px]">
-//                     My Cart
-//                   </span>
-//                 </div>
-//               </Link>
-
-//               <div className="flex items-center bg-gray-100 rounded-full px-3 py-2">
-//                 <Search size={18} />
-//                 <input
-//                   type="text"
-//                   placeholder="Search for Products..."
-//                   className="flex-1 ml-2 bg-transparent outline-none text-[14px]"
-//                 />
-//               </div>
-//             </div>
-//           )}
-//         </header>
-//       </div>
-
-//       {profileOpen && (
-//         <div
-//           className="absolute bg-[#2E3192] text-white rounded-md shadow-lg py-2 w-44 sm:w-48 z-[9999]"
-//           style={{
-//             top:
-//               (profileBtnRef.current?.getBoundingClientRect().bottom || 90) + 6,
-//             left: profileBtnRef.current?.getBoundingClientRect().left || 0,
-//           }}
-//         >
-//           <Link href="/my-profile">
-//             <p
-//               onClick={() => setProfileOpen(false)}
-//               className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-//             >
-//               My Profile
-//             </p>
-//           </Link>
-
-//           <Link href="/my-order">
-//             <p
-//               onClick={() => setProfileOpen(false)}
-//               className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-//             >
-//               My Orders
-//             </p>
-//           </Link>
-
-//           <p className="px-4 py-2 hover:bg-[#252877] cursor-pointer">Logout</p>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
-
-// export default Header;
-
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   Heart,
@@ -218,217 +8,158 @@ import {
   Menu,
   X,
   Search,
+  User,
 } from "lucide-react";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
-  const profileBtnRef = useRef(null);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setProfileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-40 bg-white">
-        <div className="w-full bg-black text-white text-center py-1 text-[13px] sm:text-[14px] md:text-[15px] font-urbanist">
+      <div className="fixed top-0 left-0 w-full z-40 bg-white shadow-lg">
+        <div className="w-full bg-black text-white font-urbanist text-[18px] text-center py-1.5">
           Welcome to Notebook Global Academy Store
         </div>
 
-        <header className="shadow bg-white w-full">
-          <div className="max-w-[1300px] mx-auto flex items-center justify-between px-3 sm:px-4 md:px-6 py-2 sm:py-3">
-            {/* LOGO */}
+        <header className="bg-white w-full">
+          <div className="max-w-[1360px] mx-auto flex items-center justify-between px-3 sm:px-4 py-2">
             <Image
-              src="/img/Notebook.png"
-              width={60}
-              height={60}
+              src="/img/notebook.png"
+              width={70}
+              height={70}
               alt="Logo"
-              className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[55px] md:h-[55px]"
+              className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[70px] md:h-[70px]"
             />
-
-            {/* SEARCH (LARGE SCREEN) */}
             <div className="hidden lg:flex flex-1 mx-6">
-              <div className="flex items-center w-full max-w-[450px] bg-gray-100 border border-gray-300 rounded-full px-4 py-2">
-                <Search size={18} />
+              <div className="flex items-center w-full max-w-[570px] bg-[#F2F3FF] rounded-lg px-4 py-2">
+                <Search size={18} className="text-[#2E3192]" />
                 <input
                   type="text"
                   placeholder="Search for Products..."
-                  className="flex-1 ml-3 bg-transparent outline-none text-[14px]"
+                  className="flex-1 ml-3 bg-transparent outline-none font-urbanist text-[15px] text-[#666666] placeholder:text-[#2E3192]/60"
                 />
               </div>
             </div>
-
-            {/* RIGHT SECTION (LARGE SCREEN) */}
-            <div className="hidden md:flex items-center gap-5">
-              {/* LAZARUS BUTTON */}
-              <div className="relative">
-                <div
-                  ref={profileBtnRef}
-                  onClick={() => setProfileOpen(!profileOpen)}
-                  className="px-3 sm:px-4 py-2 bg-[#2E3192] flex items-center gap-2 text-white cursor-pointer rounded-md"
-                >
-                  <span className="font-urbanist text-[14px] sm:text-[15px] md:text-[16px]">
-                    Lazarus
-                  </span>
-                  <MdKeyboardArrowRight
-                    className={`${
-                      profileOpen ? "rotate-90" : ""
-                    } transition-all`}
-                  />
-                </div>
-              </div>
-
+            <div className="hidden md:flex items-center gap-2">
               <Link href="/">
                 <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-                  <ShoppingBag size={23} />
-                  <span className="font-urbanist hidden xl:block">Shop</span>
-                </div>
-              </Link>
-
-              <Link href="/add-to-card">
-                <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-                  <Heart size={23} />
-                  <span className="font-urbanist hidden xl:block">
-                    My Wishlist
-                  </span>
-                </div>
-              </Link>
-
-              <Link href="/add-to-card">
-                <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
-                  <ShoppingCart size={23} />
-                  <span className="font-urbanist hidden xl:block">My Cart</span>
-                </div>
-              </Link>
-            </div>
-
-            {/* MOBILE MENU BUTTON */}
-            <button
-              className="md:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
-
-          {/* MOBILE MENU */}
-          {menuOpen && (
-            <div className="md:hidden bg-white shadow-lg w-full py-4 px-4 space-y-4">
-              <button className="w-full text-white px-3 py-2 bg-[#2E3192] rounded-md">
-                Lazarus
-              </button>
-
-              <div className="bg-[#2E3192] text-white rounded-md py-2">
-                <Link href="/my-profile">
-                  <p
-                    className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    My Profile
-                  </p>
-                </Link>
-
-                <Link href="/my-order">
-                  <p
-                    className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    My Orders
-                  </p>
-                </Link>
-
-                <p
-                  className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Logout
-                </p>
-              </div>
-
-              <Link href="/">
-                <div
-                  className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <ShoppingBag size={22} />
-                  <span className="font-urbanist font-medium text-[15px]">
+                  <ShoppingBag size={23} className="text-[#2E3192]" />
+                  <span className="font-urbanist font-semibold text-[16px] text-[#616161]">
                     Shop
                   </span>
                 </div>
               </Link>
 
-              <Link href="/add-to-card">
-                <div
-                  className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  <Heart size={22} />
-                  <span className="font-urbanist font-medium text-[15px]">
-                    My Wishlist
+              <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                <Heart size={23} className="text-[#2E3192]" />
+                <span className="font-urbanist font-semibold text-[16px] text-[#616161]">
+                  Wishlist
+                </span>
+              </div>
+
+              <Link href="/carts">
+                <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                  <ShoppingCart size={23} className="text-[#2E3192]" />
+                  <span className="font-urbanist font-semibold text-[16px] text-[#616161]">
+                    Cart
                   </span>
                 </div>
               </Link>
-
-              <Link href="/add-to-card">
+              <div className="relative" ref={dropdownRef}>
                 <div
-                  className="flex items-center gap-3 cursor-pointer p-2 rounded-lg hover:bg-gray-100"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setProfileOpen(!profileOpen)}
+                  className="p-2 bg-[#2E3192] text-white rounded-full cursor-pointer"
                 >
-                  <ShoppingCart size={22} />
-                  <span className="font-urbanist font-medium text-[15px]">
-                    My Cart
-                  </span>
+                  <User size={22} />
                 </div>
-              </Link>
 
-              <div className="flex items-center bg-gray-100 rounded-full px-3 py-2">
-                <Search size={18} />
+                {profileOpen && (
+                  <div className="absolute -right-13 bg-[#2E3192] text-white shadow-lg rounded-md py-2 w-44 z-50">
+                    <Link href="/profile" onClick={() => setProfileOpen(false)}>
+                      <p className="px-4 py-2 hover:bg-[#252877] cursor-pointer">
+                        My Profile
+                      </p>
+                    </Link>
+                    <Link href="/orders" onClick={() => setProfileOpen(false)}>
+                      <p className="px-4 py-2 hover:bg-[#252877] cursor-pointer">
+                        My Orders
+                      </p>
+                    </Link>
+                    <p className="px-4 py-2 hover:bg-[#252877] cursor-pointer">
+                      Logout
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <button
+              className="md:hidden text-[#616161]"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+          {menuOpen && (
+            <div className="md:hidden bg-white shadow-lg w-full py-4 px-4 space-y-5">
+              <div className="flex items-center bg-[#F2F3FF] rounded-lg px-4 py-2">
+                <Search size={18} className="text-[#2E3192]" />
                 <input
                   type="text"
                   placeholder="Search for Products..."
-                  className="flex-1 ml-2 bg-transparent outline-none text-[14px]"
+                  className="flex-1 ml-3 bg-transparent outline-none font-urbanist text-[15px] text-[#666]"
                 />
+              </div>
+
+              <Link href="/" onClick={() => setMenuOpen(false)}>
+                <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100">
+                  <ShoppingBag size={22} className="text-[#2E3192]" />
+                  <span className="font-urbanist font-semibold text-[16px] text-[#616161]">Shop</span>
+                </div>
+              </Link>
+
+             <Link  href="" onClick={() => setMenuOpen(false)}>
+              <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+                <Heart size={22} className="text-[#2E3192]" />
+                <span className="font-urbanist font-semibold text-[16px] text-[#616161]">Wishlist</span>
+              </div>
+             </Link>
+
+              <Link href="/carts" onClick={() => setMenuOpen(false)}>
+                <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+                  <ShoppingCart size={22} className="text-[#2E3192]" />
+                  <span className="font-urbanist font-semibold text-[16px] text-[#616161]">Cart</span>
+                </div>
+              </Link>
+
+              <div className="text-[#616161] rounded-lg mt-3">
+                <Link href="/profile" onClick={() => setMenuOpen(false)}>
+                  <p className="px-4 py-2 hover:bg-gray-100 text-[#616161]">My Profile</p>
+                </Link>
+                <Link href="/orders" onClick={() => setMenuOpen(false)}>
+                  <p className="px-4 py-2 hover:bg-gray-100 text-[#616161]">My Orders</p>
+                </Link>
+                <p className="px-4 py-2 hover:bg-gray-100 text-[#616161] cursor-pointer">
+                  Logout
+                </p>
               </div>
             </div>
           )}
         </header>
       </div>
-
-      {profileOpen && (
-        <div
-          ref={dropdownRef}
-          className="absolute bg-[#2E3192] text-white rounded-md shadow-lg py-2 w-44 sm:w-48 z-[9999]"
-          style={{
-            top:
-              profileBtnRef.current?.getBoundingClientRect().bottom +
-              window.scrollY +
-              6,
-            left:
-              profileBtnRef.current?.getBoundingClientRect().left +
-              window.scrollX,
-          }}
-        >
-          <Link href="/my-profile">
-            <p
-              onClick={() => setProfileOpen(false)}
-              className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-            >
-              My Profile
-            </p>
-          </Link>
-
-          <Link href="/my-order">
-            <p
-              onClick={() => setProfileOpen(false)}
-              className="px-4 py-2 hover:bg-[#252877] cursor-pointer"
-            >
-              My Orders
-            </p>
-          </Link>
-
-          <p className="px-4 py-2 hover:bg-[#252877] cursor-pointer">Logout</p>
-        </div>
-      )}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import Hero from '@/components/pages/Order/Hero'
+import Hero from '@/components/pages/Order/Index'
 import React from 'react'
 
 const page = () => {

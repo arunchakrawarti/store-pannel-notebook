@@ -1,10 +1,10 @@
-import Text from "@/components/pages/Home/Text";
+import Mainhome from "@/components/pages/home/Index";
 import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
-    <Text/>
-   </div>
+    <div>
+      <Mainhome />
+    </div>
   );
 }

@@ -13,26 +13,24 @@ const Input = ({
   return (
     <div className="text-text-primary flex w-full flex-col gap-1">
       {label && (
-        <label className="font-poppins font-medium text-[12px] leading-[20px] tracking-[0%]">{label}</label>
+        <label className="font-poppins font-medium text-[#5B5B5B] text-[12px] tracking-[0%]">{label}</label>
       )}
 
       {rest?.type === "textarea" ? (
         <textarea
           {...rest}
-          className={`font-poppins font-normal text-[12px] leading-[20px]  tracking-[0%] h-[90px] p-3 ${
-            error
+          className={`font-poppins font-normal text-gray-900 text-[12px]  tracking-[0%] h-[90px]  p-3 ${error
               ? "border border-red-400 ring-2 ring-red-300 focus:ring-red-500"
               : "border border-gray-300 focus:ring-2 focus:ring-gray-200"
-          } ${className}`}
+            } ${className}`}
         />
       ) : rest?.type === "select" ? (
         <select
           {...rest}
-          className={`text-dark h-[45px] w-full rounded-sm px-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 disabled:cursor-not-allowed ${
-            error
-              ? "border border-red-400 ring-2 ring-red-300 focus:ring-red-500"
+          className={`text-dark h-[45px] w-full text-[#5B5B5B] rounded-sm px-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 disabled:cursor-not-allowed ${error
+              ? "border border-red-400  ring-2 ring-red-300 focus:ring-red-500"
               : "border border-gray-200 focus:ring-2 focus:ring-gray-200"
-          } ${className}`}
+            } ${className}`}
         >
           <option value="">
             {` Select ${label || "Option"}`}
@@ -60,13 +58,11 @@ const Input = ({
           )}
           <input
             {...rest}
-            className={`text-dark h-[45px] w-full rounded-sm p-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 font-poppins disabled:cursor-not-allowed ${
-              error
+            className={`text-dark h-[45px] w-full text-black rounded-sm p-3 text-sm transition-all duration-300 ease-in-out outline-none disabled:opacity-50 font-poppins disabled:cursor-not-allowed ${error
                 ? "border border-red-400 ring-2 ring-red-300 focus:ring-red-500"
                 : "border border-gray-200 focus:ring-2 focus:ring-gray-200"
-            } ${iconClass ? "pl-10" : ""} ${
-              iconEye ? "pr-10" : ""
-            } ${className}`}
+              } ${iconClass ? "pl-10" : ""} ${iconEye ? "pr-10" : ""
+              } ${className}`}
           />
         </div>
       )}

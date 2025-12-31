@@ -1,12 +1,12 @@
 "use client";
 import React, { useRef } from "react";
-import upsc from "../../../../public/db/upsc.json";
+import magzine from "../../../../public/db/magzine.json";
 import Card1 from "../../molecules/CourseCard";
 import Link from "next/link";
 import { Button } from "@/components/comman/Button";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 
-const Upsc = () => {
+const Magazine = () => {
   const scrollRef = useRef(null);
 
   const scrollLeft = () => {
@@ -21,10 +21,10 @@ const Upsc = () => {
     <div className="container mt-5 mx-auto">
       <div className="flex justify-between items-center">
         <h1 className="font-urbanist font-bold text-[24px] text-[#3D2F2F] align-middle">
-          UPSC & State PSC
+          Magazine
         </h1>
 
-        <div className="flex gap-3">
+        <div className="flex gap-1">
           <button onClick={scrollLeft}>
             <IoArrowBackCircleOutline className="h-13 w-13 cursor-pointer text-[#BFB7F2]" />
           </button>
@@ -43,7 +43,7 @@ const Upsc = () => {
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth mt-5"
       >
-        {upsc.map((item) => (
+        {magzine.map((item) => (
           <Link href="/products/slug">
             <Card1
               key={item.id}
@@ -66,4 +66,4 @@ const Upsc = () => {
   );
 };
 
-export default Upsc;
+export default Magazine;

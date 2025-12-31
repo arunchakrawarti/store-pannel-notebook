@@ -14,7 +14,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
@@ -32,4 +31,16 @@ body {
 
 .font-poppins {
   font-family: var(--font-poppins);
+}
+
+.font-workSans {
+  font-family: var(--font-work-sans);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.container {
+  @apply w-[90%] sm:w-[90%] md:w-[90%] lg:w-[89%]
 }

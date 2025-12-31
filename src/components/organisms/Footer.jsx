@@ -1,4 +1,5 @@
 import React from "react";
+import { PhoneCallIcon } from "lucide-react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -6,50 +7,64 @@ import {
   FaYoutube,
   FaPinterest,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#0B1B47] text-white pt-12 pb-6 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-25">
-      
-      <div className="max-w-[1440px] mx-auto">
-        
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-          
-      
-          <div>
+    <footer className="w-full bg-[#282747] text-white pt-12 pb-6">
+      <div className="container mx-auto">
+
+        <div className="grid mt-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
+          <div className="md:col-span-2">
             <img
               src="/img/note.png"
               alt="logo"
               className="w-20 h-20 object-contain bg-white rounded-full"
             />
 
-            <p className="font-urbanist font-normal text-[16px] leading-[24px] mt-4">
-              A-9/8, Ansal Building, Behind Batra Cinema, Near Shriram Tea, Dr.
-              Mukherjee Nagar, Delhi, 110009
+            <p className="font-urbanist font-normal text-[16px] mt-3">
+              A-9/8, Ansal Building, Behind Batra Cinema, Near Shriram Tea,
+              Dr. Mukherjee Nagar, Delhi, 110009
             </p>
 
-            <div className="mt-4 space-y-1">
-              <p className="font-urbanist font-normal text-[16px] leading-[24px]">
-                Contact: support@example.com
-              </p>
-              <p className="font-urbanist font-normal text-[16px] leading-[24px]">
-                Phone: <span className="bg-[#EC7954] px-2 py-2 rounded-2xl">+91 9876543210</span>
+            <div className="flex mt-3 items-center gap-2">
+              <MdEmail size={22} />
+              <p className="font-urbanist font-normal text-[16px]">
+                connect@notesbookglobalacademy.com
               </p>
             </div>
 
+            <div className="flex mt-3 items-center gap-2">
+              <p className="font-urbanist font-normal text-[18px]">
+                Contact Us:
+              </p>
+
+              <div className="flex items-center gap-2 bg-[#EC7954] px-3 py-2 rounded-2xl">
+                <div className="bg-white p-1 rounded-full">
+                  <PhoneCallIcon size={16} className="text-[#EC7954]" />
+                </div>
+                <span>+91-9876543210</span>
+              </div>
+            </div>
             <div className="flex items-center gap-4 mt-5">
-              <FaFacebookF className="text-xl hover:text-blue-400 cursor-pointer" />
-              <FaTwitter className="text-xl hover:text-blue-300 cursor-pointer" />
-              <FaInstagram className="text-xl hover:text-pink-400 cursor-pointer" />
-              <FaYoutube className="text-xl hover:text-red-500 cursor-pointer" />
-              <FaPinterest className="text-xl hover:text-red-400 cursor-pointer" />
+              {[
+                { Icon: FaFacebookF, bg: "bg-blue-600" },
+                { Icon: FaTwitter, bg: "bg-sky-500" },
+                { Icon: FaInstagram, bg: "bg-pink-500" },
+                { Icon: FaYoutube, bg: "bg-red-500" },
+                { Icon: FaPinterest, bg: "bg-red-600" },
+              ].map(({ Icon, bg }, i) => (
+                <div
+                  key={i}
+                  className={`h-10 w-10 ${bg} rounded-full flex items-center justify-center hover:bg-white cursor-pointer transition`}
+                >
+                  <Icon className="text-lg text-white hover:text-black" />
+                </div>
+              ))}
             </div>
           </div>
-
-         
-          <div>
-            <h3 className="font-urbanist font-bold text-[20px] leading-[28px] mb-4">
+          <div className="md:col-span-1">
+            <h3 className="font-urbanist font-bold text-[20px] mb-4">
               Links
             </h3>
             <ul className="space-y-2">
@@ -58,32 +73,34 @@ const Footer = () => {
                 "Terms & Conditions",
                 "Return & Exchange",
                 "Shipping Policy",
-                "Shop By Category"
-              ].map((item, index) => (
-                <li key={index} className="cursor-pointer hover:underline font-urbanist text-[16px] leading-[24px]">
+                "Shop By Category",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:underline font-urbanist font-normal text-[16px]"
+                >
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Column 3 */}
-          <div>
-            <h3 className="font-urbanist font-bold text-[20px] leading-[28px] mb-4">
+          <div className="md:col-span-1">
+            <h3 className="font-urbanist font-bold text-[20px] mb-4">
               Explore
             </h3>
             <ul className="space-y-2">
-              {["Contact Us", "Blog"].map((item, index) => (
-                <li key={index} className="cursor-pointer hover:underline font-urbanist text-[16px] leading-[24px]">
+              {["Contact Us", "Blog"].map((item, i) => (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:underline font-urbanist font-normal text-[16px]"
+                >
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Column 4 */}
-          <div>
-            <h3 className="font-urbanist font-bold text-[20px] leading-[28px] mb-4">
+          <div className="md:col-span-1">
+            <h3 className="font-urbanist font-bold text-[20px] mb-4">
               Our App
             </h3>
             <ul className="space-y-2">
@@ -91,25 +108,32 @@ const Footer = () => {
                 "Notesbook Global Academy - Android APP",
                 "Notesbook Global Academy - IOS APP",
                 "User Dashboard",
-                "Daily Current Affairs"
-              ].map((item, index) => (
-                <li key={index} className="cursor-pointer hover:underline font-urbanist text-[16px] leading-[24px]">
+                "Daily Current Affairs",
+              ].map((item, i) => (
+                <li
+                  key={i}
+                  className="cursor-pointer hover:underline font-urbanist font-normal text-[16px]"
+                >
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-
         </div>
+        <h2 className="font-urbanist mt-8 font-bold text-[21px]">
+          Popular Searches
+        </h2>
 
-        {/* BOTTOM TEXT */}
-        <div className="border-t border-gray-500 mt-10 pt-4 text-center font-urbanist text-[16px] leading-[24px]">
-          Popular Searches: UPSC, SSC, Banking Exams, NEET, JEE, Railway Exams,
-          Defence Exams, State Exams, Online Test Series, Mock Tests & many more…
-        </div>
+        <p className="font-urbanist font-normal text-[19px] mt-5 mb-6">
+          Khan Sir Courses | UPSC and State PSC Courses | NEET-JEE-CUET Exam Courses |
+          UPSC Current Affairs | Daily Current Affairs | NOTESBOOK GLOPARASABOX |
+          ALUO & Monthly Current Affairs Magazine | UPSC Books |
+          BPSC Preparation Books | NEET & JEE Books |
+          Railway Preparation Exam Books | SSC Preparation Books |
+          State PSC Exam Books |
+        </p>
 
       </div>
-
     </footer>
   );
 };

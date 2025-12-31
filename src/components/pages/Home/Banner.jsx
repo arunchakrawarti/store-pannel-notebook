@@ -26,8 +26,7 @@ const Banner = () => {
   }, [direction]);
 
   return (
-    <div className="relative w-full overflow-hidden top-25 bg-black h-[430px] flex items-center justify-center">
-      {/* Banner Images */}
+    <div className="relative w-full overflow-hidden top-22 sm:top-26 md:top-31 bg-black h-[450px] flex items-center justify-center">
       <div
         className="flex transition-transform duration-1000 ease-in-out h-full"
         style={{
@@ -51,8 +50,6 @@ const Banner = () => {
           </div>
         ))}
       </div>
-
-      {/* Dots Indicator */}
       <div className="absolute  bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
         {banners.map((_, index) => (
           <div
