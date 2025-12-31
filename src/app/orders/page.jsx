@@ -1,4 +1,4 @@
-import Order from '@/components/pages/MyOrder/Order'
+import Order from '@/components/pages/my-order/Order'
 import React from 'react'
 
 const page = () => {

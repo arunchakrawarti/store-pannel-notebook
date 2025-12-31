@@ -29,8 +29,6 @@ const AddAddress = () => {
         <Input label="PIN Code" placeholder="Enter PIN code" />
         <Input label="City" placeholder="Enter city" />
         </div>
-
-        {/* Country Select */}
         <div className="grid mt-5 grid-cols-1  lg:grid-cols-2 gap-4">
           <Input
           label="Country"
@@ -38,8 +36,6 @@ const AddAddress = () => {
           options={countries}
           placeholderOption="Select Country"
         />
-
-        {/* State Select */}
         <Input
           label="State"
           type="select"

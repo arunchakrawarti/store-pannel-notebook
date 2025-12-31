@@ -4,7 +4,7 @@ import shop from "../../../../public/db/shop.json";
 import category from "../../../../public/db/category.json";
 import AllCard from "@/components/molecules/ExamCategoryCard";
 import { IoIosArrowUp } from "react-icons/io";
-import Card1 from "@/components/molecules/CourseCard";
+import CourseCard from "@/components/molecules/CourseCard";
 import Link from "next/link";
 
 const Category = () => {
@@ -68,7 +68,7 @@ const Category = () => {
         >
           {shop.map((item) => (
             <Link key={item.id} href="order">
-              <Card1
+              <CourseCard
                 img={item.img}
                 title={item.title}
                 price={item.price}

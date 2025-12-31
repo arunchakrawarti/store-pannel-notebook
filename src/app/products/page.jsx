@@ -1,5 +1,5 @@
-import Category from '@/components/pages/Shop/Category'
-import Product from '@/components/pages/Shop/Product'
+import Category from '@/components/pages/shop/Category'
+import Product from '@/components/pages/shop/Product'
 import React from 'react'
 
 const page = () => {
