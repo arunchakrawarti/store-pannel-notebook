@@ -7,14 +7,10 @@
 // export default nextConfig;
 
 
-import { join } from "path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.resolve.alias["@"] = join(__dirname, "src");
-    return config;
-  },
+  turbopack: {}, // Enables Turbopack with empty config
 };
 
 export default nextConfig;
