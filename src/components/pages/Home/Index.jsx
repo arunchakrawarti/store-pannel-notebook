@@ -6,7 +6,7 @@ import Upsc from './Upsc'
 import Notebook from './Notebook'
 import Magazine from './Magazine'
 
-const Mainhome = () => {
+const Homepage = () => {
   return (
     <div>
       <Banner />
@@ -20,4 +20,4 @@ const Mainhome = () => {
   )
 }
 
-export default Mainhome
+export default Homepage

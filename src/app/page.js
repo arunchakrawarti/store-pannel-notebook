@@ -1,10 +1,9 @@
-import Mainhome from "@/components/pages/home/Index";
-import Image from "next/image";
+import Homepage from "@/components/pages/home/Index";
 
 export default function Home() {
   return (
     <div>
-      <Mainhome />
+      <Homepage />
     </div>
   );
 }
