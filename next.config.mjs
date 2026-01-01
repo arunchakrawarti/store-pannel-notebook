@@ -7,10 +7,11 @@
 // export default nextConfig;
 
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {}, // Enables Turbopack with empty config
+  webpack: (config) => config,
+  turbopack: {},
 };
 
 export default nextConfig;
+
