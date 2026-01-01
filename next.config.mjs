@@ -6,9 +6,11 @@
 
 // export default nextConfig;
 
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {}, // optional, to silence Turbopack errors
+  turbopack: {}, 
 };
 
 export default nextConfig;
