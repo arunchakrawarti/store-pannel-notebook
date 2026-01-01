@@ -7,12 +7,12 @@
 // export default nextConfig;
 
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {}, 
+  turbopack: {}, // Turbopack enabled
 };
 
 export default nextConfig;
+
 
 
