@@ -6,12 +6,11 @@
 
 // export default nextConfig;
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => config,
-  turbopack: {},
+  turbopack: {}, // optional, to silence Turbopack errors
 };
 
 export default nextConfig;
+
 
