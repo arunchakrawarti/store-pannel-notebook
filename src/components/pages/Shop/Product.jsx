@@ -25,8 +25,8 @@ const Product = () => {
             Sort By:
           </h2>
 
-          <div className="flex border border-gray-300 items-center justify-between gap-44 px-2 py-2">
-            <button className="font-urbanist font-medium text-[14px] text-black sm:text-[16px] text-center">
+          <div className="flex border border-gray-300 items-center justify-between gap-42 px-3 py-2">
+            <button className="font-urbanist font-medium text-[15px] text-black sm:text-[16px] text-center">
               Latest
             </button>
             <p><IoIosArrowDown className="text-gray-700" /></p>

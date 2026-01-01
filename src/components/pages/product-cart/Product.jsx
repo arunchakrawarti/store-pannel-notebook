@@ -2,19 +2,25 @@ import React from "react";
 import { FiMinus, FiPlus, FiTrash2 } from "react-icons/fi";
 
 const Product = () => {
+
+  const products = [
+    { id: 1, price: 199 },
+    { id: 2, price: 279 },
+    { id: 3, price: 179 },
+  ];
   return (
     <div className="w-full pt-38 container mx-auto py-10 grid md:grid-cols-3 gap-10">
       <div className="md:col-span-2 border border-gray-300 rounded-2xl p-4">
-        <div className="hidden md:flex items-center justify-between px-3 py-2 border-b text-black border-gray-300 font-inter text-[14px] font-semibold  tracking-[0]">
+        <div className="hidden md:flex items-center justify-between px-3 py-2 border-b text-black border-gray-300 font-inter text-[14px] font-semibold">
           <span className="w-[25%] text-center">Product</span>
           <span className="w-[15%]">Price</span>
           <span className="w-[25%]">Quantity</span>
           <span className="w-[13%]">Total</span>
         </div>
 
-        {[1, 2, 3].map((item, index) => (
+        {products.map((item) => (
           <div
-            key={index}
+            key={item.id}
             className="flex flex-col md:flex-row items-center justify-between border-b border-gray-200 md:border-none py-4 gap-4"
           >
             <div className="flex items-center gap-4 w-full md:w-[25%]">
@@ -23,45 +29,39 @@ const Product = () => {
                 className="h-12 w-15 object-cover rounded-md"
                 alt="Product"
               />
-              <p className="font-inter text-[14px] font-semibold text-black tracking-[0] line-clamp-3">
-                Bihar Daroga Pariksha Fast Track Study Book & Yearly Bihar Current Affairs 2025 Set of 2 Books
-                Hindi Medium
-
+              <p className="font-inter text-[14px] font-semibold text-black line-clamp-3">
+                Bihar Daroga Pariksha Fast Track Study Book & Yearly Bihar Current Affairs 2025
               </p>
             </div>
-
-            <div className="w-full md:w-[15%] font-inter font-semibold text-[14px] text-black tracking-normal">
-              ₹199.00
+            <div className="w-full md:w-[15%] font-inter font-semibold text-[14px] text-black">
+              ₹{item.price}.00
             </div>
-
             <div className="w-full md:w-[25%] flex text-black items-center gap-3">
-              <button className="p-2 rounded-full bg-[#FAFAFA] hover:bg-gray-100">
+              <button className="p-1 rounded-full bg-[#E5E5E5]">
                 <FiMinus size={18} />
               </button>
 
               <span className="font-medium">1</span>
 
-              <button className="p-2  rounded-full bg-[#FAFAFA] hover:bg-gray-100">
+              <button className="p-1 rounded-full bg-[#E5E5E5]">
                 <FiPlus size={18} />
               </button>
             </div>
-
-            <div className="w-full md:w-[15%] font-inter font-semibold text-[14px] text-black tracking-normal">
-              ₹199.00
+            <div className="w-full md:w-[15%] font-inter font-semibold text-[14px] text-black">
+              ₹{item.price}.00
             </div>
           </div>
         ))}
-        <hr className="border-gray-300 mt-5" />
-        <div className="flex flex-col sm:flex-col md:flex-row justify-between gap-4 pt-10">
+        <hr className="border-gray-300 mt-9" />
+        <div className="flex flex-col sm:flex-col md:flex-row justify-between gap-4 pt-5">
           <button className="px-4 py-2 border-2 cursor-pointer border-[#2E3192] text-[#2E3192] rounded-lg font-inter text-[20px] font-medium tracking-[0] w-full md:w-auto">
             Back to Store
           </button>
 
-          <button className="px-4 py-2 border-2 border-[#2E3192] text-[#2E3192] cursor-pointer rounded-lg font-inter text-[20px] font-medium tracking-[0] w-full md:w-auto">
+          <button className="px-8 py-2 border-2 border-[#2E3192] text-[#2E3192] cursor-pointer rounded-lg font-inter text-[20px] font-medium tracking-[0] w-full md:w-auto">
             Clear Cart
           </button>
         </div>
-
       </div>
 
       <div className="border md:col-span-1 border-gray-300 rounded-2xl p-5 h-fit sticky  bg-[#FAFAFA] top-4">

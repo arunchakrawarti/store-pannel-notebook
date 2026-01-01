@@ -39,11 +39,11 @@ const Footer = () => {
                 Contact Us:
               </p>
 
-              <div className="flex items-center gap-2 bg-[#EC7954] px-3 py-2 rounded-2xl">
+              <div className="flex items-center gap-3 bg-[#EC7954] px-3 py-2 rounded-full">
                 <div className="bg-white p-1 rounded-full">
-                  <PhoneCallIcon size={16} className="text-[#EC7954]" />
+                  <PhoneCallIcon size={18} className="text-[#EC7954]" />
                 </div>
-                <span>+91-9876543210</span>
+                <span className="font-poppins tracking-wide text-[17px]">+91-9876543210</span>
               </div>
             </div>
             <div className="flex items-center gap-4 mt-5">
@@ -124,7 +124,7 @@ const Footer = () => {
           Popular Searches
         </h2>
 
-        <p className="font-urbanist font-normal text-[19px] mt-5 mb-6">
+        <p className="font-urbanist font-normal text-[17px] mt-5 mb-6">
           Khan Sir Courses | UPSC and State PSC Courses | NEET-JEE-CUET Exam Courses |
           UPSC Current Affairs | Daily Current Affairs | NOTESBOOK GLOPARASABOX |
           ALUO & Monthly Current Affairs Magazine | UPSC Books |

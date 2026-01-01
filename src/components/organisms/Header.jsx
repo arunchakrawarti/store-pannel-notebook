@@ -29,13 +29,13 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-40 bg-white shadow-lg">
+      <div className="fixed top-0 left-0 w-full z-40 bg-white shadow">
         <div className="w-full bg-black text-white font-urbanist text-[18px] text-center py-1.5">
           Welcome to Notebook Global Academy Store
         </div>
 
         <header className="bg-white w-full">
-          <div className="max-w-[1360px] mx-auto flex items-center justify-between px-3 sm:px-4 py-2">
+          <div className="max-w-[1380px] mx-auto flex items-center justify-between px-3 sm:px-4 py-2">
             <Image
               src="/img/notebook.png"
               width={70}
@@ -44,18 +44,18 @@ const Header = () => {
               className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[70px] md:h-[70px]"
             />
             <div className="hidden lg:flex flex-1 mx-6">
-              <div className="flex items-center w-full max-w-[570px] bg-[#F2F3FF] rounded-lg px-4 py-2">
+              <div className="flex items-center w-full max-w-[570px] bg-[#F2F3FF] rounded-lg px-4 py-2.5">
                 <Search size={18} className="text-[#2E3192]" />
                 <input
                   type="text"
-                  placeholder="Search for Products..."
-                  className="flex-1 ml-3 bg-transparent outline-none font-urbanist text-[15px] text-[#666666] placeholder:text-[#2E3192]/60"
+                  placeholder="Search for a Products .."
+                  className="flex-1 ml-3 bg-transparent outline-none font-urbanist text-[15px] text-[#666666] placeholder:text-[#666666]"
                 />
               </div>
             </div>
             <div className="hidden md:flex items-center gap-2">
               <Link href="/">
-                <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-gray-100">
+                <div className="flex items-center gap-2 cursor-pointer p-2 rounded-lg  hover:bg-gray-100">
                   <ShoppingBag size={23} className="text-[#2E3192]" />
                   <span className="font-urbanist font-semibold text-[16px] text-[#616161]">
                     Shop
