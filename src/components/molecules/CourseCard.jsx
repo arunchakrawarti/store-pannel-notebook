@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
-const Card1 = ({ img, title, price, mrp, rating = 5, imageFit = "contain" }) => {
+const CourseCard = ({ img, title, price, mrp, rating = 5, imageFit = "contain" }) => {
   const [isPoster, setIsPoster] = useState(false);
 
   return (
@@ -70,4 +70,4 @@ const Card1 = ({ img, title, price, mrp, rating = 5, imageFit = "contain" }) => 
   );
 };
 
-export default Card1;
+export default CourseCard;

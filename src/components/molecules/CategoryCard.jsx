@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ img, title }) => {
+const CategoryCard = ({ img, title }) => {
   return (
     <div className=" flex flex-col items-center ">
 
@@ -22,4 +22,4 @@ const Card = ({ img, title }) => {
   );
 };
 
-export default Card;
+export default CategoryCard;

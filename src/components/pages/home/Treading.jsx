@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import productData from "../../../../public/db/productData.json";
-import Card1 from "../../molecules/CourseCard";
+import CourseCard from "../../molecules/CourseCard";
 import Link from "next/link";
 import { Button } from "@/components/comman/Button";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -36,7 +36,7 @@ const Trending = () => {
       <div ref={scrollRef} className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth mt-5">
         {productData.map((item) => (
           <Link key={item.id} href="/products/slug">
-            <Card1
+            <CourseCard
               img={item.img}
               title={item.title}
               price={item.price}
@@ -48,9 +48,9 @@ const Trending = () => {
       </div>
 
       <div className="flex mt-4 justify-end">
-       <Link href="/products">
-        <Button>View All</Button>
-       </Link>
+        <Link href="/products">
+          <Button>View All</Button>
+        </Link>
       </div>
     </div>
   );

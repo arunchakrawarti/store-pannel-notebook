@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from "react";
-import Card from "../../molecules/CategoryCard";
+import CategoryCard from "../../molecules/CategoryCard";
 import courseData from "../../../../public/db/courseData.json";
 import Link from "next/link";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -65,7 +65,7 @@ const Exam = () => {
         {courseData.map((item, i) => (
           <div key={i} className="shrink-0">
             <Link href="/order">
-              <Card img={item.img} title={item.title} />
+              <CategoryCard img={item.img} title={item.title} />
             </Link>
           </div>
         ))}

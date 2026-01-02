@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import note from "../../../../public/db/note.json";
-import Card1 from "../../molecules/CourseCard";
+import CourseCard from "../../molecules/CourseCard";
 import Link from "next/link";
 import { Button } from "@/components/comman/Button";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
@@ -45,7 +45,7 @@ const Notebook = () => {
       >
         {note.map((item) => (
           <Link href="/products/slug">
-            <Card1
+            <CourseCard
               key={item.id}
               img={item.img}
               title={item.title}
