@@ -8,7 +8,7 @@ const Card1 = ({ img, title, price, mrp, rating = 5, imageFit = "contain" }) => 
 
   return (
     <div
-      className=" w-full sm:w-[230px] md:w-[250px] lg:w-[275px] bg-white rounded-xl border  border-gray-200 hover:shadow-2xl transition duration-300 flex flex-col
+      className=" w-full sm:w-[270px] md:w-[250px] lg:w-[275px] bg-white rounded-xl border  border-gray-200 hover:shadow-2xl transition duration-300 flex flex-col
       "
     >
       <div
