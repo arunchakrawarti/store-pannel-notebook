@@ -6,7 +6,7 @@ import Upsc from './Upsc'
 import Notebook from './Notebook'
 import Magazine from './Magazine'
 
-const Homepage = () => {
+export const Homepage = () => {
   return (
     <div>
       <Banner />
@@ -19,4 +19,3 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
