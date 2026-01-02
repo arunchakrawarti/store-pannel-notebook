@@ -1,11 +1,11 @@
 import React from 'react'
-import CourseDetail from './CourseDetail'
-import CourseCate from './CourseCate'
+import CourseCate from './Coursecate'
+import Orders from './CourseDetail';
 
 const Hero = () => {
   return (
     <div>
-      <CourseDetail />
+      <Orders />
       <CourseCate />
     </div>
   )
